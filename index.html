@@ -21,33 +21,37 @@
        </header>
 
        <main>
-         <form action="" method="get">
+         <form action="" method="get" id="search-form">
            <input type="text" id="book-search" placeholder="search-books...">
            <label for="book-search">Search Books</label>
          </form>
 
          <div class="wrapper">
-           <ul>
+           <ul id="booklist">
              <li>
                <span>Fearless</span>
-               <span>Delete</span>
+               <span class="deleter">Delete</span>
              </li>
              <li>
                <span>Homo Sapiens</span>
-               <span>Delete</span>
+               <span class="deleter">Delete</span>
              </li>
              <li>
                <span>Homo Deus</span>
-               <span>Delete</span>
+               <span class="deleter">Delete</span>
              </li>
              <li>
                <span>Mastery</span>
-               <span>Delete</span>
+               <span class="deleter">Delete</span>
+             </li>
+             <li>
+               <span>The Alchemy</span>
+               <span class="deleter">Delete</span>
              </li>
            </ul>
          </div>
 
-         <form action="" method="get">
+         <form action="" method="get" id="added-books">
            <input type="text" id="add-book">
            <button type="submit" name="button"> Add Book</button>
          </form>
