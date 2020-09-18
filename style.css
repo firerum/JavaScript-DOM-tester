@@ -10,6 +10,7 @@
 
 body {
   font-family: Montserrat, sans-serif;
+  height: 2000px;
 }
 
 ul {
@@ -87,7 +88,7 @@ main .wrapper li {
 main span:first-child {
   display: flex;
   align-items: center;
-  padding-left: 0.5em;
+  padding-left: 1em;
   font-weight: bold;
   position: relative;
 }
