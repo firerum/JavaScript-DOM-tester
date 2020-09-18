@@ -17,6 +17,13 @@ sr.reveal(".main-nav", {
   delay: 500
 });
 
+sr.reveal("footer", {
+  origin: "bottom",
+  distance: "20em",
+  duration: 600,
+  delay: 700,
+});
+
 
 /* const deleterList = document.querySelectorAll("span:nth-of-type(2)");
 deleterList.forEach(function(deleter) {
