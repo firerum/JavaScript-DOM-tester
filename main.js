@@ -1,12 +1,12 @@
 window.sr = ScrollReveal();
 
 
-sr.reveal("main .wrapper", {
+sr.reveal("main .book", {
   origin: "left",
   delay: 500,
   reset: "true",
   duration: 600,
-  distance: "50px"
+  distance: "50em"
 });
 
 sr.reveal(".main-nav", {
