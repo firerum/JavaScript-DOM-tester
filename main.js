@@ -50,5 +50,19 @@ bookHider.addEventListener("change", function(e) {
   else {
     bookList.style.display = "block";
   }
-
 });
+
+//Book Filtering functionality
+const searchBar = document.forms["search-form"].querySelector("input");
+searchBar.addEventListener("keyup", function(e) {
+  const inputedValue = e.target.value.toLowerCase();
+  const bookNames = document.querySelectorAll("li");
+  bookNames.forEach(function(book) {
+    if (book.textContent.toLowerCase().indexOf(inputedValue) !== -1) {
+      book.style.display = "flex";
+    }
+    else {
+      book.style.display = "none";
+    }
+  })
+})
