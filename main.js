@@ -1,30 +1,3 @@
-window.sr = ScrollReveal();
-
-
-sr.reveal("main .book", {
-  origin: "left",
-  delay: 500,
-  reset: "true",
-  duration: 600,
-  distance: "50em"
-});
-
-sr.reveal(".main-nav", {
-  origin: "top",
-  duration: 600,
-  distance: "50em",
-  scale: 0.3,
-  delay: 500
-});
-
-sr.reveal("footer", {
-  origin: "bottom",
-  distance: "20em",
-  duration: 600,
-  delay: 700,
-});
-
-
 /* const deleterList = document.querySelectorAll("span:nth-of-type(2)");
 deleterList.forEach(function(deleter) {
   deleter.addEventListener("click", function(e) {
@@ -33,28 +6,36 @@ deleterList.forEach(function(deleter) {
   });
 }); */
 
+
+// Delete Books
 const bookList = document.querySelector("#booklist");
+bookList.addEventListener("click", function(e) {
+  if (e.target.className == "deleter") {
+    const li = e.target.parentElement;
+     bookList.removeChild(li);
+  }
+});
 
-  bookList.addEventListener("click", function(e) {
-    if (e.target.className == "deleter") {
-      const li = e.target.parentElement;
-      bookList.removeChild(li);
-    }
-  });
-
-  /* const btn = document.querySelector("button");
-  btn.addEventListener("submit", function(e) {
-    const span = document.createElement("span");
-    span.textContent = document.querySelector("#added-books #add-book").value;
-    span.setAttribute("class", "deleter");
-    const li = document.createElement("li");
-    li.appendChild(span);
-    bookList.appendChild(li);
-  }); */
-
+// Create New Books
 const addBooks = document.forms["added-books"];
 addBooks.addEventListener("submit", function(e) {
   e.preventDefault();
   const value = addBooks.querySelector("input[type='text']").value;
-  console.log(value);
+
+  //create New Elements
+  const li = document.createElement("li");
+  const book = document.createElement("span");
+  const deleter = document.createElement("span");
+
+  //Two methods of adding classes to the Elements;
+  //deleter.setAttribute("class", "deleter"); // method 1
+  deleter.classList.add("deleter"); //This method also has the the remove class method
+
+  //Add the value of the form into the span tags
+  book.textContent = value;
+  deleter.textContent = "Delete";
+  //Append the varibles to the DOM.
+  li.appendChild(book);
+  li.appendChild(deleter);
+  bookList.appendChild(li);
 });
