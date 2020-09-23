@@ -28,8 +28,8 @@ addBooks.addEventListener("submit", function(e) {
   const deleter = document.createElement("span");
 
   //Two methods of adding classes to the Elements;
-  //deleter.setAttribute("class", "deleter"); // method 1
-  deleter.classList.add("deleter"); //This method also has the the remove class method
+  //deleter.setAttribute("class", "deleter"); // This method also has the remove attribute method (removeAttribute("class"))
+  deleter.classList.add("deleter"); //This method also has the the remove class method (classList.remove("deleter"))
 
   //Add the value of the form into the span tags
   book.textContent = value;
@@ -38,4 +38,17 @@ addBooks.addEventListener("submit", function(e) {
   li.appendChild(book);
   li.appendChild(deleter);
   bookList.appendChild(li);
+});
+
+//Hiding and revealing the books with a checkbox.
+const bookHider = document.querySelector("#hide-books");
+bookHider.addEventListener("change", function(e) {
+  if (bookHider.checked) {
+    bookList.style.display = "none";
+  }
+
+  else {
+    bookList.style.display = "block";
+  }
+
 });
