@@ -1,7 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const wrapper = document.getElementsByClassName("wrapper");
-  Array.from(wrapper).forEach(div => {
-    div.style.backgroundColor = "pink";
-  });
-
+window.addEventListener("DOMContentLoaded", function() {
+  const wrapper = document.getElementsByTagName("div");
+  wrapper.style.backgroundColor = "pink";
 })
