@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>JavaScript DOM</title>
+    <script type="text/javascript" src="main.js"></script>
   </head>
 
   <body>
@@ -56,16 +57,29 @@
              <input type="checkbox" id="hide-books" class="hider">
              <label for="hide-books">Hide All Books</label>
            </div>
-           <input type="text" id="add-book">
+           <input type="text" id="add-book" required>
            <button type="submit" name="button"> Add Book</button>
          </form>
+
+         <div id="tabbed-content">
+           <ul class="tabs">
+             <li data-target="#about">About</li>
+             <li data-target="#contact">Contact</li>
+           </ul>
+           <div class="panel active" id="about">
+             <p>content for about tab...</p>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, corporis!</p>
+           </div>
+           <div class="panel" id="contact">
+             <p>content for contact tab...</p>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae atque maxime, voluptatibus. Deleniti voluptate minus omnis odio eaque consequuntur itaque.</p>
+           </div>
+         </div>
        </main>
 
        <footer>
          <p>&copy; 2020 Ademuyiwa Adewuyi.</p>
        </footer>
      </div>
-     <script type="text/javascript" src="main.js"></script>
-    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
   </body>
 </html>
