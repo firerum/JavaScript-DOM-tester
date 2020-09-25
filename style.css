@@ -66,9 +66,9 @@ main {
 
 .main-nav ul {
   display: flex;
-  justify-content: space-between;
   background-color: #ecf4f3;
   padding: 1em 2em;
+  justify-content: space-between;
 }
 
 main .wrapper {
@@ -110,7 +110,7 @@ main span:first-child:hover::before {
 main span:nth-of-type(2) {
   margin-left: auto;
   background-color: var(--bg-color);
-  color: red;
+  color: #fff;
   padding: 0.5em 1em;
 }
 
@@ -122,33 +122,6 @@ main span:nth-of-type(2):hover {
 
 main .check-wrapper {
   margin-bottom: 2em;
-}
-
-#tabbed-content li {
-  display: inline-block;
-  padding: 10px 14px;
-  background-color: #ddd;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-.panel {
-  display: none;
-}
-
-.active {
-  display: block;
-  padding: 1em 1em;
-  background-color: #eaeaeb;
-  font-weight: bold;
-  font-size: 0.8rem;
-}
-
-#tabbed-content p:first-of-type::first-letter {
-  font-size: 2rem;
-  font-weight: bolder;
-  color: darkblue;
 }
 
 footer {
