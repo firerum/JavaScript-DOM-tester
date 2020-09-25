@@ -124,6 +124,33 @@ main .check-wrapper {
   margin-bottom: 2em;
 }
 
+#tabbed-content li {
+  display: inline-block;
+  padding: 10px 14px;
+  background-color: #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.panel {
+  display: none;
+}
+
+.active {
+  display: block;
+  padding: 1em 1em;
+  background-color: #eaeaeb;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+#tabbed-content p:first-of-type::first-letter {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: darkblue;
+}
+
 footer {
   margin-top: 1em;
 }
